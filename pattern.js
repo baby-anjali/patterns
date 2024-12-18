@@ -80,6 +80,14 @@ const triangle = function (size) {
   return range(1, size + 1, 1).map(stars);
 };
 
+const padding = function (size) {
+  return function (row) {
+    return row.padStart(size);
+  }
+}
+
 const rightTriangle = function (size) {
-  return triangle(size).map(function (row) { return row.padStart(4); });
+  const rowPad = padding(size);
+
+  return triangle(size).map(rowPad);
 } 

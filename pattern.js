@@ -89,3 +89,7 @@ const padding = function (size) {
 const rightTriangle = function (size) {
   return triangle(size).map(padding(size));
 }
+
+const isOdd = function (number) {
+  return number % 2 !== 0;
+}

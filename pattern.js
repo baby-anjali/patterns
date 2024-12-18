@@ -98,6 +98,19 @@ const thresholdOdd = function (number) {
   return isOdd(number) ? number : number - 1;
 }
 
-const diamond = function (size) {
-  [size].map(thresholdOdd);
+const someFunction = function (size) {
+  
 }
+
+const diamond = function (size) {
+  const properSize = thresholdOdd(size);
+
+  const quarter = range(1, properSize, 1);
+  const reverse = range(1, properSize, 1).reverse();
+  const patternSize = quarter.concat(reverse.slice(1, reverse.length));
+  const half = patternSize.map(stars).map(padding(properSize - 1));
+
+  console.log(half);
+};
+
+diamond(4);

@@ -4,14 +4,14 @@ const simpleCount = function () {
   return function () {
     x++;
     return x;
-  }
-}
+  };
+};
 
 const add = function (x) {
   return function (y) {
     return x + y;
-  }
-}
+  };
+};
 
 const limitedCount = function (y) {
   let x = 0;
@@ -23,8 +23,8 @@ const limitedCount = function (y) {
 
     x++;
     return x;
-  }
-}
+  };
+};
 
 
 const cycle = function (array) {
@@ -38,5 +38,5 @@ const cycle = function (array) {
     }
 
     return array[x];
-  }
-}
+  };
+};

@@ -97,3 +97,7 @@ const isOdd = function (number) {
 const thresholdOdd = function (number) {
   return isOdd(number) ? number : number - 1;
 }
+
+const diamond = function (size) {
+  [size].map(thresholdOdd);
+}

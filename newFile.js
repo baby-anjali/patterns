@@ -13,15 +13,15 @@ const filledRectangle = function (column, row) {
 };
 
 const cycle = function (array) {
-  let x = -1;
+  let index = -1;
 
   return function () {
-    x++;
+    index++;
 
-    if (x >= array.length) {
-      x = 0;
+    if (index >= array.length) {
+      index = 0;
     }
 
-    return array[x];
+    return array[index];
   };
 };

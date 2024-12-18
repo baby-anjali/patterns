@@ -67,5 +67,11 @@ const hollowRectangle = function (column, row) {
 };
 
 const spacedAlterRectangle = function (column, row) {
+  const symbols = cycle([stars, dashes, spaces]);
+  const patternSize = Array(row).fill(column);
 
+  return patternSize.map(function (size) {
+    const newRow = symbols();
+    return newRow(size);
+  });
 };

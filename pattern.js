@@ -99,18 +99,17 @@ const thresholdOdd = function (number) {
 }
 
 const someFunction = function (size) {
+  const quarter = range(1, size, 1);
+  const reverse = range(1, size, 1).reverse();
+  const patternSize = quarter.concat(reverse.slice(1, reverse.length));
   
+  return patternSize.map(stars).map(padding(size - 1));
 }
 
 const diamond = function (size) {
   const properSize = thresholdOdd(size);
 
-  const quarter = range(1, properSize, 1);
-  const reverse = range(1, properSize, 1).reverse();
-  const patternSize = quarter.concat(reverse.slice(1, reverse.length));
-  const half = patternSize.map(stars).map(padding(properSize - 1));
-
-  console.log(half);
+  console.log(someFunction(properSize));
 };
 
 diamond(4);

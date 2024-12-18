@@ -65,3 +65,7 @@ const hollowRectangle = function (column, row) {
 
   return rectangle.fill(hollowLine(column), 1, - 1);
 };
+
+const spacedAlterRectangle = function (column, row) {
+
+};

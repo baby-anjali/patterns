@@ -13,7 +13,7 @@ const evaluate = function (init, funcName) {
 };
 
 const combine = function (...functionsList) {
-  return function (input) {
+  return function (...input) {
     return functionsList.reduce(evaluate, input);
   };
 };

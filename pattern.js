@@ -75,3 +75,9 @@ const spacedAlterRectangle = function (column, row) {
     return newRow(size);
   });
 };
+
+const triangle = function (size) {
+  const patternSize = range(1, size + 1, 1);
+  
+  return patternSize.map(stars);
+};

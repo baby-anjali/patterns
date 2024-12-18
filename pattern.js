@@ -93,3 +93,7 @@ const rightTriangle = function (size) {
 const isOdd = function (number) {
   return number % 2 !== 0;
 }
+
+const thresholdOdd = function (number) {
+  return isOdd(number) ? number : number - 1;
+}

@@ -43,8 +43,8 @@ const alterRectangle = function (column, row) {
   const patternSize = Array(row).fill(column);
 
   return patternSize.map(function (size) {
-    const row = symbols();
-    return row(size);
+    const newRow = symbols();
+    return newRow(size);
   });
 };
 

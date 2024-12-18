@@ -87,7 +87,5 @@ const padding = function (size) {
 }
 
 const rightTriangle = function (size) {
-  const rowPad = padding(size);
-
-  return triangle(size).map(rowPad);
-} 
+  return triangle(size).map(padding(size));
+}

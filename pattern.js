@@ -79,3 +79,7 @@ const spacedAlterRectangle = function (column, row) {
 const triangle = function (size) {
   return range(1, size + 1, 1).map(stars);
 };
+
+const rightTriangle = function (size) {
+  return triangle(size).map(function (row) { return row.padStart(4); });
+} 

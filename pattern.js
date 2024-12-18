@@ -103,13 +103,17 @@ const someFunction = function (size) {
   const reverse = range(1, size, 1).reverse();
   const patternSize = quarter.concat(reverse.slice(1, reverse.length));
   
-  return patternSize.map(stars).map(padding(size - 1));
+  return patternSize.map(stars);
 }
 
 const diamond = function (size) {
   const properSize = thresholdOdd(size);
 
-  console.log(someFunction(properSize));
+  const firstHalf = someFunction(properSize).map(padding(properSize - 1));
+  const otherHalf = addGaps(someFunction(properSize - 1));
+  console.log(firstHalf);
+  console.log(otherHalf);
+  
 };
 
 diamond(4);

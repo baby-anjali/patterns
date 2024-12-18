@@ -106,6 +106,13 @@ const someFunction = function (size) {
   return patternSize.map(stars);
 }
 
+const addGaps = function (array) {
+  array.push('');
+  array.unshift('');
+
+  return array;
+}
+
 const diamond = function (size) {
   const properSize = thresholdOdd(size);
 

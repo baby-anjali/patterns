@@ -9,7 +9,5 @@ const spaces = pattern(' ');
 const dashes = pattern('-');
 
 const filledRectangle = function (column, row) {
-  const patternSize = Array(row).fill(column);
-
-  return patternSize.map(stars);
+  return Array(row).fill(column).map(stars);
 };

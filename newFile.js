@@ -1,3 +1,5 @@
-const add = function (num1, num2) {
-  return num1 + num2;
+const pattern = function (symbol) {
+  return function (times) {
+    return symbol.repeat(times);
+  };
 };

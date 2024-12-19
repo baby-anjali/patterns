@@ -98,7 +98,7 @@ const thresholdOdd = function (number) {
   return isOdd(number) ? number : number - 1;
 }
 
-const someFunction = function (size) {
+const halfDiamond = function (size) {
   const quarter = range(1, size, 1);
   const reverse = range(1, size, 1).reverse();
   const patternSize = quarter.concat(reverse.slice(1, reverse.length));
@@ -116,11 +116,16 @@ const addGaps = function (array) {
 const diamond = function (size) {
   const properSize = thresholdOdd(size);
 
-  const firstHalf = someFunction(properSize).map(padding(properSize - 1));
-  const otherHalf = addGaps(someFunction(properSize - 1));
-  console.log(firstHalf);
-  console.log(otherHalf);
+  const firstHalf = halfDiamond(properSize).map(padding(properSize - 1));
+  const otherHalf = addGaps(halfDiamond(properSize - 1));
+
+  const pattern = [];
+  for (let index = 0; index < firstHalf.length; index++) {
+    const newRow = firstHalf[index].concat(otherHalf[index]);
+    pattern.push(newRow);
+  }
   
+  return pattern;
 };
 
-diamond(4);
+console.log(diamond(5).join('\n'));
